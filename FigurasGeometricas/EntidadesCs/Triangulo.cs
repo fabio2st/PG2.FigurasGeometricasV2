@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntidadesCs
 {
-	public class Triangulo : Figura
+	public class Triangulo : Figura, Figura2D
 	{
 		public float Altura { get; set; }
 		public float Base { get; set; }
@@ -15,7 +15,7 @@ namespace EntidadesCs
 			Base = @base;
 			Altura = altura;
 		}
-		public override float CalcularArea()
+		public float CalcularArea()
 		{
 			return (Base * Altura) / 2;
 		}

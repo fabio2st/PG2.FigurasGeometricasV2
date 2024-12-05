@@ -4,5 +4,4 @@ Public MustInherit Class Figura
 		Me.Nombre = nombre
 	End Sub
 
-	Public MustOverride Function CalcularArea() As Single
 End Class

@@ -1,9 +1,9 @@
 ﻿namespace EntidadesCs
 {
-	public class Cuadrado : Figura, Figura2D
+	public class Cubo : Figura, Figura3D
 	{
 		public float Lado { get; set; }
-		public Cuadrado(string nombre, float lado) : base(nombre)
+		public Cubo(string nombre, float lado) : base(nombre)
 		{
 			Lado = lado;
 		}
@@ -12,9 +12,9 @@
 			return $"Soy {Nombre} y tengo mis lados de {Lado}";
 		}
 
-		public float CalcularArea()
+		public float CalcularVolumen()
 		{
-			return Lado * Lado;
+			return (float)Math.Pow(Lado, 3);
 		}
 	}
 }

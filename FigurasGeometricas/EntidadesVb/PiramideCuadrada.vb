@@ -1,6 +1,6 @@
-﻿Public Class Rectangulo
+﻿Public Class PiramideCuadrada
 	Inherits Figura
-	Implements Figura2D
+	Implements Figura3D
 
 	Public Property Base As Single
 	Public Property Altura As Single
@@ -9,11 +9,11 @@
 		Me.Base = base
 		Me.Altura = altura
 	End Sub
+
+	Public Function CalcularVolumen() As Single Implements Figura3D.CalcularVolumen
+		Return 1 / 3 * Math.Pow(Base, 2) * Altura
+	End Function
 	Public Overrides Function ToString() As String
 		Return $"Soy {Nombre} y tengo la altura de {Altura} y la base de {Base}"
-	End Function
-
-	Public Function CalcularArea() As Single Implements Figura2D.CalcularArea
-		Return Base * Altura
 	End Function
 End Class

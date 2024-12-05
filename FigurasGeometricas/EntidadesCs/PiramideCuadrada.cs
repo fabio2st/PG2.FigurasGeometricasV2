@@ -1,17 +1,17 @@
 ﻿namespace EntidadesCs
 {
-	public class Rectangulo : Figura, Figura2D
+	public class PiramideCuadrada : Figura, Figura3D
 	{
 		public float Altura { get; set; }
 		public float Base { get; set; }
-		public Rectangulo(string nombre, float @base, float altura) : base(nombre)
+		public PiramideCuadrada(string nombre, float @base, float altura) : base(nombre)
 		{
 			Base = @base;
 			Altura = altura;
 		}
-		public float CalcularArea()
+		public float CalcularVolumen()
 		{
-			return Base * Altura;
+			return (float)(1 / 3f * Math.Pow( Base, 2) * Altura);
 		}
 		public override string ToString()
 		{
